@@ -155,10 +155,8 @@ ul, ol, li {
     padding: 16px;
     color: #FFFFFF;
 }
-#menuCheckbox {
-    display: none;
-}
-.icon-close, .icon-menu {
+.icon-close, .icon-menu,
+#menuCheckbox, label {
     display: none;
 }
 .icon-close, .icon-menu {

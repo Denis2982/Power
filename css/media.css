@@ -1,5 +1,5 @@
 @media screen and (max-width: 992px) {
-    .btn-download {
+    .header__download {
         display: none;
     }
     .header {
@@ -50,7 +50,10 @@
         gap: 50px;
         transform: translateX(-150%);
         transition: all .2s;
-    }    
+    }
+    label {
+        display: inline-block;
+    }
     .icon-menu {
         display: inline-block;
     }
