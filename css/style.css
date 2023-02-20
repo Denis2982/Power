@@ -76,6 +76,49 @@ ul, ol, li {
     transform: translateY(-2px);
     box-shadow: 0px 5px 10px rgba(191, 194, 197, 1);
 }
+.burger {
+    display: none;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+.burger span {
+    height: 2px;
+    width: 100%;
+    border-radius: 4px;
+    transform: scale(1);
+    background-color: #fff;
+    transition: all 0.3s;
+}
+.burger::after, .burger::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+.burger::after {
+    top: 0;
+}
+.burger::before {
+    bottom: 0;
+}
+.burger.active span {
+    transform: scale(0);
+}
+.burger.active::after {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+.burger.active::before {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
 .btn-download {
     display:inline-block;
     background: linear-gradient(93.22deg, #E1E1E1 8.37%, #FFFFFF 99.95%);
@@ -154,11 +197,4 @@ ul, ol, li {
 .load-icon {
     padding: 16px;
     color: #FFFFFF;
-}
-.icon-close, .icon-menu,
-#menuCheckbox, label {
-    display: none;
-}
-.icon-close, .icon-menu {
-    font-size: 48px;
 }

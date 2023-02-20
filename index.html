@@ -20,8 +20,7 @@
                 <a href="#" class="header__logo">
                     <img class="Header__logo-img" src="./img/aplle.svg" alt="Logo Aplle">
                 </a>               
-                <input id="menuCheckbox" type="checkbox">
-                <ul class="header__list">
+                <ul class="header__list" id="listBurger">
                     <li class="list__item">
                         <a href="#" class="list__link">Features</a>
                     </li>
@@ -32,10 +31,9 @@
                         <a href="#" class="list__link">Stories</a>
                     </li>
                 </ul>
-                <label for="menuCheckbox">
-                    <span class="material-symbols-outlined icon-menu">menu</span>
-                    <span class="material-symbols-outlined icon-close">close</span>
-                </label>
+                <div class="burger" id="menuBurger" onclick="navburger()">
+                    <span></span>
+                </div>
                 <div class="header__download">
                     <a href="#" class="btn-download">Download for free</a>
                 </div>
@@ -58,6 +56,7 @@
                 </div>
             </main>
         </div>
-    </div>       
+    </div> 
+    <script src="./script.js"></script>     
 </body>
 </html>

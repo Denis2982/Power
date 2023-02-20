@@ -51,20 +51,27 @@
         transform: translateX(-150%);
         transition: all .2s;
     }
-    label {
-        display: inline-block;
-    }
-    .icon-menu {
-        display: inline-block;
-    }
-    #menuCheckbox:checked~.header__list {
+    li {
+        transform: translateX(-150%);
+        transition: all .3s;
+    }    
+    .burger {
+        display: flex;
+    }    
+    .header__list.active {
         transform: translateX(0);
     }
-    #menuCheckbox:checked~label .icon-close {
-        display: inline-block;
+    .header__list.active li {
+        transform: translateX(0);
     }
-    #menuCheckbox:checked~label .icon-menu {
-        display: none;
+    li:nth-child(n+1) {
+        transition-delay: 0.1s;
+    }
+    li:nth-child(n+2) {
+        transition-delay: 0.2s;
+    }
+    li:nth-child(n+3) {
+        transition-delay: 0.3s;
     }
     .load-icon {
         padding: 10px;
